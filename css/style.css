@@ -81,7 +81,7 @@ img {
 	margin: 0;
 	min-height: 60px;
 	padding: 0 24px;
- *padding: 0 23px; /* Needed for IE8 and old versions */
+    padding: 0 23px; /* Needed for IE8 and old versions */
 	text-align: center;
 	text-transform: uppercase;
 	width: auto;
@@ -248,7 +248,7 @@ img {
 	font-weight: normal;
 	line-height: 23px;
 	margin: 96px 0 0;
- *margin: 102px 0 0;/* Needed for IE8 and old versions */
+    margin: 102px 0 0;/* Needed for IE8 and old versions */
 	min-height: 27px;
 	padding: 17px 0 10px;
 	position: relative;
@@ -1345,12 +1345,12 @@ img {
 	text-indent: -99999px;
 	width: 18px;
 }
-#footer .connect div div a.facebook {
+#footer .connect div div a.github {
 	background-position: 0 0;
 	margin: 0 0 0 16px;
 	width: 18px;
 }
-#footer .connect div div a.twitter {
+#footer .connect div div a.linkedin {
 	background-position: 0 -114px;
 	margin: 0 0 0 28px;
 	width: 44px;
@@ -1365,10 +1365,10 @@ img {
 	margin: 0 0 0 29px;
 	width: 30px;
 }
-#footer .connect div div a.facebook:hover {
+#footer .connect div div a.github:hover {
 	background-position: -20px 0;
 }
-#footer .connect div div a.twitter:hover {
+#footer .connect div div a.linkedin:hover {
 	background-position: -46px -114px;
 }
 #footer .connect div div a.googleplus:hover {
