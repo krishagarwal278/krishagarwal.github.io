@@ -1,6 +1,5 @@
 <!doctype html>
-<!-- Website template by freewebsitetemplates.com -->
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,79 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<script src="js/mobile.js" type="text/javascript"></script>
+
+	<!-- React and Babel CDN -->
+	<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+	<!-- Custom Styles for Resume Section -->
+	<style>
+		.resume-section {
+			text-align: center;
+			margin: 50px auto;
+			padding: 20px;
+			background: linear-gradient(135deg, #f9f9f9, #e9ecef);
+			border-radius: 15px;
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+			max-width: 800px;
+			width: 90%;
+			animation: fadeIn 1.5s ease-in-out;
+		}
+
+		.resume-title {
+			font-size: 24px;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.resume-container {
+			height: 400px;
+			overflow: hidden;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			margin: 0 auto 20px auto;
+		}
+
+		.resume-iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.resume-iframe:hover {
+			transform: scale(1.02);
+		}
+
+		.download-btn {
+			display: inline-block;
+			padding: 12px 25px;
+			background-color: #007bff;
+			color: #fff;
+			font-size: 16px;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+		}
+
+		.download-btn:hover {
+			background-color: #0056b3;
+			box-shadow: 0 6px 12px rgba(0, 86, 179, 0.4);
+			transform: translateY(-3px);
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
 </head>
 <body>
 	<div id="page">
@@ -35,10 +107,12 @@
 					<img src="images/satellite.png" alt="" class="satellite">
 					<h1>Krish Agarwal</h1>
 					<h3>Personal Portfolio</h3>
-		
-			<!-- <div class="footer">
+				</div>
+			</div>
 
-			</div> -->
+			<!-- React Component for Resume Section -->
+			<div id="resume-section"></div>
+
 		</div>
 		<div id="footer">
 			<div class="connect">
@@ -47,7 +121,7 @@
 					<div>
 						<a href="https://github.com/krishagarwal278/" class="github">github</a>
 						<a href="https://www.linkedin.com/in/krish-ashish-agarwal/" class="linkedin">linkedin</a>
-						<a href="krishagarwal278@gmail.com" class="googleplus">gmail</a>
+						<a href="mailto:krishagarwal278@gmail.com" class="googleplus">gmail</a>
 					</div>
 				</div>
 			</div>
@@ -58,5 +132,29 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- React Script -->
+	<script type="text/babel">
+		function ResumeSection() {
+			return (
+				<div className="resume-section">
+					<h2 className="resume-title">My Resume</h2>
+					<div className="resume-container">
+						<iframe
+							className="resume-iframe"
+							src="resume.pdf"
+							title="Resume Viewer"
+						></iframe>
+					</div>
+					<a href="resume.pdf" className="download-btn" download>
+						Download Resume as PDF
+					</a>
+				</div>
+			);
+		}
+
+		// Render the React Component
+		ReactDOM.render(<ResumeSection />, document.getElementById("resume-section"));
+	</script>
 </body>
 </html>
