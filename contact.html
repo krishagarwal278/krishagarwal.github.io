@@ -1,61 +1,188 @@
 <!doctype html>
-<!-- Website template by freewebsitetemplates.com -->
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>contact - Space Science Website Template</title>
+	<title>Contact - Krish Agarwal</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
 	<script src="js/mobile.js" type="text/javascript"></script>
+	<style>
+		/* Global Styling */
+		body {
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+		}
+
+		/* Navbar Styling */
+		#navigation li {
+			display: inline;
+			margin-right: 20px;
+		}
+
+		#navigation a {
+			text-decoration: none;
+			color: #fff;
+			font-size: 1rem;
+			text-transform: none; /* Ensure case sensitivity */
+		}
+
+		#navigation .selected a {
+			font-weight: bold;
+			color: #007bff;
+		}
+
+		/* Contact Form Styling */
+		.contact-form {
+			background: #fff;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			max-width: 500px;
+			margin: 30px auto;
+			padding: 20px;
+			color: #333;
+			text-align: center;
+		}
+
+		.contact-form h2 {
+			font-size: 1.8rem;
+			margin-bottom: 10px;
+			color: #333;
+			text-transform: none; /* Case-sensitive heading */
+		}
+
+		.contact-form form {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.contact-form input,
+		.contact-form textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 1rem;
+			resize: none;
+			text-transform: none; /* Keep user input case-sensitive */
+		}
+
+		.contact-form input::placeholder,
+		.contact-form textarea::placeholder {
+			text-transform: none; /* Case-sensitive placeholder text */
+			color: #888;
+		}
+
+		.contact-form button {
+			background-color: #007bff;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 1rem;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			text-transform: none; /* Case-sensitive button text */
+		}
+
+		.contact-form button:hover {
+			background-color: #0056b3;
+		}
+
+		/* Footer Section */
+		.connect a {
+			text-decoration: none;
+			font-size: 0.9rem;
+			color: #fff;
+			margin: 0 10px;
+			text-transform: none; /* Ensure links are case-sensitive */
+		}
+
+		.footnote p {
+			font-size: 0.8rem;
+			color: #aaa;
+			text-transform: none; /* Ensure footer text is case-sensitive */
+		}
+	</style>
 </head>
 <body>
 	<div id="page">
+		<!-- Navbar Section -->
 		<div id="header">
 			<div>
 				<ul id="navigation">
-					<li class="selected">
+					<li>
 						<a href="index.html">Home</a>
 					</li>
 					<li>
-						<a href="about.html">About Me</a>
+						<a href="about.html">About me</a>
 					</li>
-					<li>
-						<a href="assignments.html">Assignments</a>
-					</li>
-					<li>
+					<li class="selected">
 						<a href="contact.html">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</div>
+
+		<!-- Body Section -->
 		<div id="body">
 			<div class="header">
 				<div class="contact">
 					<h1>Contact</h1>
-					<p> You can reach me at: <br></br> 
-						+1 (617)406-9316
-						<a href="agkrish@bu.edu" class="googleplus">agkrish@bu.edu</a>
-					</p>
+				</div>
+
+				<!-- Contact Form Section -->
+				<div class="contact-form">
+					<h2>Get in touch</h2>
+					<form id="contactForm" action="https://formspree.io/f/xjkkjonj" method="POST">
+						<input type="text" name="name" id="name" placeholder="Your name" required>
+						<input type="email" name="_replyto" id="email" placeholder="Your email" required>
+						<textarea name="message" id="message" rows="5" placeholder="Your message" required></textarea>
+						<button type="submit">Send message</button>
+					</form>
 				</div>
 			</div>
 		</div>
-			<div id="footer">
-				<div class="connect">
+
+		<!-- Footer Section -->
+		<div id="footer">
+			<div class="connect">
+				<div>
+					<h1>Let's connect!</h1>
 					<div>
-						<h1>Let's Connect!</h1>
-						<div>
-							<a href="https://github.com/krishagarwal278/" class="github">github</a>
-							<a href="https://www.linkedin.com/in/krish-ashish-agarwal/" class="linkedin">linkedin</a>
-							<a href="krishagarwal278@gmail.com" class="googleplus">gmail</a>
-						</div>
-					</div>
-				</div>
-				<div class="footnote">
-					<div>
-						<p>&copy; Website by Krish Agarwal | ALL RIGHTS RESERVED</p>
+						<a href="https://github.com/krishagarwal278/" class="github">GitHub</a>
+						<a href="https://www.linkedin.com/in/krish-ashish-agarwal/" class="linkedin">LinkedIn</a>
+						<a href="mailto:krishagarwal278@gmail.com" class="googleplus">Gmail</a>
 					</div>
 				</div>
 			</div>
+			<div class="footnote">
+				<div>
+					<p>&copy; Website by Krish Agarwal | All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Client-Side Validation Script -->
+	<script>
+		// Add event listener to the form
+		document.getElementById('contactForm').addEventListener('submit', function (e) {
+			// Capture user inputs
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const message = document.getElementById('message').value;
+
+			// Check if the inputs retain case sensitivity
+			console.log('Name:', name);
+			console.log('Email:', email);
+			console.log('Message:', message);
+
+			// Form submission proceeds without alterations to the case
+		});
+	</script>
 </body>
 </html>
