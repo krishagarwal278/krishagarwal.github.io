@@ -101,11 +101,19 @@
 			</div>
 		</div>
 		<div id="body" class="home">
-			<div class="header">
-				<div id="typewriter-section"></div>
-
+			<div class="header" style = "background: linear-gradient(135deg, #1c1c1c, #3d3d3d);
+			margin-top: 5%;
+			padding: 100px 20px;
+			color: white;
+			text-align: center;">
+				<!-- <div id="typewriter-section"></div> -->
+				<h1 style="font-size: 2.5rem; margin-bottom: 5%; 	font-family: audiowide-regular-webfont; ">Welcome to My Portfolio</h1>
+					<p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+					
+						I am Krish Agarwal. I'm a passionate software engineer and a fintech enthusiast.
+					</p>
 			</div>
-
+			
 			<!-- React Component for Resume Section -->
 			<div id="resume-section"></div>
 
@@ -152,15 +160,6 @@
 		// Render the React Component
 		ReactDOM.render(<ResumeSection />, document.getElementById("resume-section"));
 	</script>
-	<!-- Import Typewriter.js -->
-	<script type="module">
-		import Typewriter from 'intro.jsx';
-	
-		ReactDOM.render(
-		  React.createElement(Typewriter),
-		  document.getElementById('typewriter-section')
-		);
-	  </script>
 
 </body>
 </html>
